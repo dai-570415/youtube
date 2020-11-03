@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    padding: 0 24px;
+    background: #202020;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    .logo {
+        display: block;
+        width: 80px;
+    }
+    .item {
+        color: #fff;
+    }
+    a {
+        line-height: 56px;
+        color: #fff;
+        text-decoration: none;
+    }
+    form {
+        display: flex;
+        width: 640px;
+        height: 32px;
+        margin: 12px 0;
+        input {
+            font-size: 14px;
+            color: #fff;
+            width: 80%;
+            text-indent: 0.5rem;
+            border: 1px solid #303030;
+            background:#181818;
+            outline: none;
+        }
+        ::placeholder {
+            color: #505050;
+        }
+        button {
+            font-size: 14px;
+            color: #5e5e5e;
+            width: 64px;
+            background: #303030;
+            border: 1px solid #303030;
+            outline: none;
+        }
+        @media screen and (max-width: 768px) {
+            width: 176px;
+            button {
+                width: 40px;
+            }
+        }
+    }
+}

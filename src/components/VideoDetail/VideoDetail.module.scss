@@ -1,0 +1,97 @@
+.leftWrapper {
+    width: 64%;
+    margin: 24px 0 0 0;
+    .videowrap {
+        // 動画レスポンシブ対応
+        width: 100%;
+        height: 0;
+        position: relative;
+        margin: 0 0 16px 0;
+        padding-bottom: 56.25%;
+        .video {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    h3, h4, pre {
+        color: #fff;
+        line-height: 1.5;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 0 0 8px 0;
+    }
+    h4 {
+        font-size: 16px;
+        margin: 0 0 12px 0;
+    }
+    p {
+        font-size: 14px;
+        color: #5e5e5e;
+        margin: 0 0 24px 0;
+        padding: 0 0 24px 0;
+        border-bottom: 1px solid #303030;
+    }
+    pre {
+        font-size: 16px;
+        letter-spacing: -.25px;
+        color: #fff;
+        white-space: pre-wrap;
+        a {
+            color: #69b8ec;
+        }
+    }
+
+    // もっと見る実装(CSSのみ)
+    .gradBtn {
+        color: #fff;
+    }
+    .gradBtn::before {
+        content: "もっと見る";
+        display: block;
+        font-size: 14px;
+        color: #5e5e5e;
+        margin: 0 0 16px 0;
+    }
+    .gradItem {
+        position: relative;
+        overflow: hidden;
+        height: 140px; /*隠した状態の高さ*/
+    }
+    .gradItem::before {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: "";
+    }
+    .gradTrigger {
+        display: none; /*チェックボックスは常に非表示*/
+    }
+    .gradTrigger:checked ~ .gradBtn::before {
+        content: "一部を表示" /*チェックされていたら、文言を変更する*/
+    }
+    .gradTrigger:checked ~ .gradItem {
+        height: auto; /*チェックされていたら、高さを戻す*/
+    }
+    .gradTrigger:checked ~ .gradItem::before {
+        display: none; /*チェックされていたら、gradItemのbeforeを非表示にする*/
+    }
+    // もっと見る(ここまで)
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+        .video {
+            width: 100%;
+            height: 400px;
+            margin: 0 0 16px 0;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.side {
+    width: 32%;
+    margin: 24px 0 0 0;
+    h4 {
+        color: #fff;
+        margin: 0 0 16px 0;
+    }
+    .item {
+        display: flex;
+        margin: 0 0 16px 0;
+        img {
+            width: 200px;
+            margin: 0 8px 0 0;
+        }
+        p {
+            text-align: left;
+            font-size: 14px;
+            color: #fff;
+            margin: 0 0 4px 0;
+            span {
+                margin: 0 0 0 2px;
+            }
+        }
+        h6 {
+            text-align: left;
+            color: #5e5e5e;
+        }
+    }
+    @media screen and (max-width: 960px) {
+        width: 100%;
+    }
+}
